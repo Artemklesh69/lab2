@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+  <html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Обратная форма</title>
+    <link href="style.css" rel="stylesheet"  type = "text/css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=AR+One+Sans&display=swap" rel="stylesheet">
+ </head>
+<body>
+    <form method="post" action="https://httpbin.org/post" enctype="multipart/form-data">
+      <fieldset>
+      <legend><b>Ваши данные</b></legend>
+      <label for="fio"> Ваша фамилия: </label><input type="text" id="fio" name="fio" placeholder="Фамилия" required><br>
+      <label for="name"> Ваше имя: </label><input type="text"  name="name" id="name" placeholder="Имя" required><br>
+      <label for="ot"> Ваше отчество:</label> <input type="text" id="ot" name="ot" placeholder="Очество" required><br>
+      <label for="email"> Ваш email: </label><input type="email" id="email" name="email" placeholder="Email" required><br>
+      <label>Текст сообщения:</label><br>
+      <textarea name="text"  placeholder="Введите ваше сообщение" required></textarea>
+      <button type="reset">Очистить</button>
+      </fieldset>
+      <fieldset>
+        <legend><label for="file"><b>Проблема</b></label></legend>
+        <input type="file" value="file" name="file">
+      </fieldset>
+      <fieldset>
+        <legend><b>Откуда узнали о нас?</b></legend>
+         <input name="from" type="radio" id="i" value="i" ><label for="i">Интернет</label>
+         <input name="from"type="radio" id="t" value="t"><label for="t">Телевизор</label>
+         <input name="from" type="radio" id="d" value="d"><label for="d">Знакомые</label>
+         <input name="from" type="radio" id="p" value="p" ><label for="p">Другой вариант</label>
+         
+      </fieldset>
+  
+      <fieldset>
+        <legend><b>Обратная связь</b></legend>
+        <div >Тип обращения</div>
+        <select name="otvet">
+          
+          <option value="negative">Жалоба</option>
+          <option value="positiv">Предложение</option>
+        </select><br>
+      </fieldset>
+    <fieldset>
+      <legend><b>Согласие</b></legend>
+        <label for="da">Даете согласие на обработку персональных данных?</label><br>
+        <input type="checkbox" name="da" id="da"> <br>
+          
+          <button>Отправить</button>
+    </fieldset>
+    </form>
+  </body>
+  </html>
